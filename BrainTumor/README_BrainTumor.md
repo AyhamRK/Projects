@@ -37,6 +37,7 @@ BrainTumor/
 
 ## Dataset
 
+- **Source:** [Brain Tumor Detection Dataset — Kaggle](https://www.kaggle.com/datasets/pkdarabi/medical-image-dataset-brain-tumor-detection/data)
 - **Total images:** 3,064 MRI scans
 - **Classes:** Glioma, Meningioma, Pituitary
 - **Split:**
