@@ -1,0 +1,310 @@
+body{
+  margin: 0;
+  background: white;
+  font-family: 'Geneva' , sans-serif;
+  font-weight: 400;
+}
+
+.container{
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+header{
+  background: #ffa104;
+}
+
+header::after{
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.group-name{
+  float: left;
+  padding: 10px 0;
+  font-size: 20px;
+}
+
+nav{
+  float: right;
+  position: sticky
+}
+
+nav ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+nav li{
+  display: inline-block;
+  margin-left: 70px ;
+  padding-top: 23px;
+  position: relative;
+}
+
+nav a{
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav a:hover{
+  color: #000;
+}
+
+
+nav a::before{
+  content: '';
+  display: block;
+  height: 5px;
+  width: 100%;
+  background-color: #444;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before{
+  width: 100%;
+}
+
+
+.title-names{
+  font-size: 33px;
+  font-weight: 300;
+  line-height: 1.0909090909;
+  text-transform: uppercase;
+  padding: 50px;
+  padding-left: 300px;
+}
+
+.page-content{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.container-for-image-and-articls {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+
+.hero-image {
+  width: 100%;
+  max-height: 650px;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.p-for-hero-text{
+  font-size: 25px;
+  font-style: oblique;
+}
+.column {
+  flex: 1;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+
+
+
+
+
+.about-us-contanier{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-us-img{
+  width: 400px;
+  height: 400px;
+  float: left;
+}
+
+.text{
+  font-size: 20px;
+  padding-left: 20px;
+  padding-top: 20px ;
+  float:left;
+}
+
+button{
+  border: 2px solid #444;
+  color: #2c604e;
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: transparent;
+}
+
+button:hover::after{
+  left:120%;
+  transition: all 550ms cubic-bezier(0.19,1,0.22,1);
+}
+button::after{
+  background: white;
+  z-index: 20;
+  content: "";
+  height: 155px;
+  left: -75px;
+  opacity: .5;
+  position: absolute;
+  top:-50px;
+  transition: all 550ms cubic-bezier(0.19,1,0.22,1);
+  width: 50px;
+}
+.footer{
+  margin-top: 150px;
+  width: 1036px;
+  padding: 100px 15%;
+  background: #7e7e7e;
+  color: #000000;
+  display: flex;
+}
+
+.footer div{
+  text-align: center;
+}
+
+.col-2{
+  flex-grow: 1;
+}
+
+.footer div h3{
+  font-weight: 300;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.col-1 a{
+  display: block;
+  text-decoration: none;
+  color: #efefef;
+  margin-bottom: 10px;
+}
+
+.col-2 a{
+  display: block;
+  text-decoration: none;
+  color: #efefef;
+  margin-bottom: 10px;
+}
+
+.social-icons{
+  margin-top: 30px;
+}
+
+.social-icons i{
+  font-size: 22px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+a:link{
+  color: rgb(0, 0, 0);
+}
+
+a:visited{
+  color: rgb(0, 0, 0);
+}  
+
+.text p{
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.col-2 h3{
+margin-top: 20%;  
+}
+
+@media only screen and (max-width: 600px) {
+  nav {
+    float: none;
+  }
+
+  nav ul {
+    text-align: center;
+    padding: 10px;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 0;
+  }
+
+  .group-name,
+  nav {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero-text {
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container-for-image-and-articls,
+  .about-us-contanier {
+    flex-direction: column;
+  }
+
+  .column {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .text {
+    padding: 20px;
+  }
+
+  .image {
+    order: -1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    width:100%;
+    padding: 20px 5%;
+    flex-direction: column;
+  }
+
+  .col-1,
+  .col-2,
+  .col-3 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+
